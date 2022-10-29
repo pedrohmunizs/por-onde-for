@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+}
+.fundo{
+    background-image: url(./imagens/Beige\ Olive\ Green\ Company\ Fresh\ and\ Friendly\ Company\ Website.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    margin: 0px;
+  
+  }
+  .header {
+    padding: 15px;
+    border-bottom: 2px solid #ffffff;
+    background-color: black;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #32b9cd;
+    font-weight: 900;
+
+}
+
+ul {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 0;
+    margin: 25px;
+}
+
+li {
+    color: #ffffff;
+
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+}
+
+#container1 {
+
+    padding: 85px 0;
+   /* height: 00px;*/
+   font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+
+.quiz{
+    
+    padding: 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf0ece3;
+    padding: 10px 10px;
+    margin: 10px 400px;
+    border-radius: 30px;
+    box-shadow: 0 7px 10px #115639;
+    
+}
+.quiz img{
+    border-radius: 20px;
+}
+
+.quiz button{
+    background-color: black;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#perguntas{
+    /* height: 00px;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#div_pergunta{
+    padding: 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf0ece3;
+    padding: 10px 10px;
+    margin: 0px 400px;
+    border-radius: 30px;
+    box-shadow: 0 7px 10px #115639;
+}

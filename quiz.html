@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><b>HISTÓRIA</b></li>
+                    <li><b>QUIZ</b></li>
+                    <li><b>AVALIAÇÃO</b></li>
+                </ul>
+                <img src="./imagens/logo.png" alt=""height="70px">
+                <ul>
+                <li><b>CADASTRAR</b></li>
+                <li><b>LOGIN</b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="fundo">
+        <div id="container1">
+            <div class="quiz">
+                <h2>VOCÊ REALMENTE CONHECE O SANTOS?</h2><br>
+                <img src="./imagens/Elenco-Santos-2013.jpg" height="200px" alt=""><br>
+                <button onclick="iniciar()">INICIAR QUIZ</button>
+            </div>
+            </div>
+        </div>
+   
+</body>
+</html>
+<script>
+    var contador=0
+    function iniciar(){
+        container1.innerHTML=''
+        container1.innerHTML='<div id="perguntas"><div id="div_pergunta"></div></div>'
+        div_pergunta.innerHTML=`<b>QUEM FEZ O GOL DE EMPATE CONTRA O AUDAX NA FINAL DO PAULISTA DE 2016?</b><br>`
+        div_pergunta.innerHTML+=`<img src="./imagens/audax.jpg" alt="" height="200px"><br>`
+        div_pergunta.innerHTML+=`<input id="in_jogador"><button onclick="responder()">RESPONDER</button>`
+
+        var jogador=in_jogador.value.toLowerCase()
+
+        if(jogador=='ronaldo mendes'){
+            contador++
+        }
+
+
+    }
+    function responder(){
+        var jogador=in_jogador.value.toLowerCase()
+
+         if(jogador=='ronaldo mendes'){
+            contador++
+        }
+        div_pergunta.innerHTML=''
+
+        div_pergunta.innerHTML=`<b>QUEM MARCO O GOL DO TITULOO DA LIBERTADORES DE 2011?</b><br>`
+        div_pergunta.innerHTML+=`<img src="./imagens/2011.jpg" alt="" height="200px"><br>`
+        div_pergunta.innerHTML+=`<input id="in_jogador"><button onclick="responder()">RESPONDER</button>`
+
+        var jogador=in_jogador.value.toLowerCase()
+
+            if(jogador=='danilo'){
+                contador++
+            }
+
+        div_pergunta.innerHTML=''
+    }
+</script>

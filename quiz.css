@@ -56,7 +56,7 @@ li {
 }
 
 
-.quiz{
+#div_quiz{
     
     padding: 20px 10px;
     border-radius: 10px;
@@ -71,11 +71,11 @@ li {
     box-shadow: 0 7px 10px #115639;
     
 }
-.quiz img{
+#div_quiz img{
     border-radius: 20px;
 }
 
-.quiz button{
+#div_quiz button{
     background-color: black;
     color: #ffffff;
     border-radius: 20px;

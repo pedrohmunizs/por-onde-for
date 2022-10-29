@@ -26,31 +26,26 @@
     </div>
     <div class="fundo">
         <div id="container1">
-            <div class="quiz">
+            <div id="div_quiz">
                 <h2>VOCÊ REALMENTE CONHECE O SANTOS?</h2><br>
-                <img src="./imagens/Elenco-Santos-2013.jpg" height="200px" alt=""><br>
+                <img src="./imagens/santospele.JPG" height="200px" alt=""><br>
                 <button onclick="iniciar()">INICIAR QUIZ</button>
             </div>
             </div>
         </div>
+        
+        
    
 </body>
 </html>
 <script>
     var contador=0
     function iniciar(){
-        container1.innerHTML=''
-        container1.innerHTML='<div id="perguntas"><div id="div_pergunta"></div></div>'
-        div_pergunta.innerHTML=`<b>QUEM FEZ O GOL DE EMPATE CONTRA O AUDAX NA FINAL DO PAULISTA DE 2016?</b><br>`
-        div_pergunta.innerHTML+=`<img src="./imagens/audax.jpg" alt="" height="200px"><br>`
-        div_pergunta.innerHTML+=`<input id="in_jogador"><button onclick="responder()">RESPONDER</button>`
-
-        var jogador=in_jogador.value.toLowerCase()
-
-        if(jogador=='ronaldo mendes'){
-            contador++
-        }
-
+       /* container1.innerHTML=''
+        container1.innerHTML='<div id="perguntas"><div id="div_pergunta"></div></div>'*/
+        div_quiz.innerHTML=`<b>QUEM FEZ O GOL DE EMPATE CONTRA O AUDAX NA FINAL DO PAULISTA DE 2016?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/audax.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<input id="in_jogador"><button onclick="responder()">RESPONDER</button>`
 
     }
     function responder(){
@@ -59,18 +54,96 @@
          if(jogador=='ronaldo mendes'){
             contador++
         }
-        div_pergunta.innerHTML=''
 
-        div_pergunta.innerHTML=`<b>QUEM MARCO O GOL DO TITULOO DA LIBERTADORES DE 2011?</b><br>`
-        div_pergunta.innerHTML+=`<img src="./imagens/2011.jpg" alt="" height="200px"><br>`
-        div_pergunta.innerHTML+=`<input id="in_jogador"><button onclick="responder()">RESPONDER</button>`
+        div_quiz.innerHTML=`<b>QUEM MARCO O GOL DO TITULOO DA LIBERTADORES DE 2011?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/2011.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<input id="in_jogador"><button onclick="responder1()">RESPONDER</button>`
 
-        var jogador=in_jogador.value.toLowerCase()
+        
+        }
+
+        function responder1(){
+            var jogador=in_jogador.value.toLowerCase()
 
             if(jogador=='danilo'){
                 contador++
             }
+        div_quiz.innerHTML=`<b>QUAL FOI O PRIMEIRO JOGADOR VENEZUELANO A JOGAR PELO SANTOS?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/venezuela.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<select name="" id="sel_santos"><option value="0">Selecione o jogador</option><option value="0">PEÑARANDA</option><option value="1">BREITNER</option><option value="0">SOTELDO</option><option value="0">CUEVA</option></select><button onclick="responder2()">RESPONDER</button>`
+            
+        }
 
-        div_pergunta.innerHTML=''
-    }
+        function responder2(){
+            var jogador=Number(sel_santos.value)
+
+            if(jogador==1){
+                contador++
+            }
+        div_quiz.innerHTML=`<b>QUE JOGADOR FOI REVELAÇÃO DO BRASILEIRÃO 2016</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/revelacao.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<select name="" id="sel_santos"><option value="0">Selecione o jogador</option><option value="0">THIAGO MAIA</option><option value="0">ZECA</option><option value="1">VITOR BUENO</option><option value="0">LUCAS VERÍSSIMO</option></select><button onclick="responder3()">RESPONDER</button>`
+
+        }
+
+        function responder3(){
+            var jogador=Number(sel_santos.value)
+
+            if(jogador==1){
+                contador++
+            }
+        div_quiz.innerHTML=`<b>QUEM MARCO O GOL DO TITULO DO PAULISTÃO 2007 CONTRA O SÃO CAETANO?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/caetano.png" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<input id="in_jogador"><button onclick="responder4()">RESPONDER</button>`
+        
+        }
+
+        function responder4(){
+
+            var jogador=in_jogador.value.toLowerCase()
+
+            if(jogador=='junior moraes'||jogador=='moraes'){
+                contador++
+        }
+        div_quiz.innerHTML=`<b>QUEM FOI O ARTILHEIRO DO SANTOS EM 2013?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/Elenco-Santos-2013.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<input id="in_jogador"><button onclick="responder5()">RESPONDER</button>`
+
+        }
+
+        function responder5(){
+            var jogador=in_jogador.value.toLowerCase()
+
+            if(jogador=='cicero'||jogador=='cícero'){
+                contador++
+        }
+        div_quiz.innerHTML=`<b>CONTRA QUEM O SANTOS FOI CAMPEÃO DA COPA CONMEMBOL DE 1998?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/1998.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<select name="" id="sel_santos"><option value="0">Selecione o time</option><option value="1">ROSARIO CENTRAL</option><option value="0">LDU</option><option value="0">COLO-COLO</option><option value="0">UNION ESPAÑOLA</option></select><button onclick="responder6()">RESPONDER</button>`
+
+        }
+
+        function responder6(){
+            var time=Number(sel_santos.value)
+
+            if(time==1){
+                contador++
+            }
+        div_quiz.innerHTML=`<b>QUANTOS PENALTIS FABIO COSTA DEFENDEU NAS OITAVAS DE FINAL DA LIBERTADORES CONTRA O NACIONAL EM 2003?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/fabiocosta.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<select name="" id="sel_santos"><option value="0">Selecione a quantidade</option><option value="0">0</option><option value="0">1</option><option value="0">2</option><option value="1">3</option></select><button onclick="responder7()">RESPONDER</button>`
+
+
+        }
+
+        function responder7(){
+            var time=Number(sel_santos.value)
+
+            if(time==1){
+                contador++
+            }
+        div_quiz.innerHTML=`<b>QUEM FOI O ARTILHEIRO DO SANTOS EM 2013?</b><br>`
+        div_quiz.innerHTML+=`<img src="./imagens/Elenco-Santos-2013.jpg" alt="" height="200px"><br>`
+        div_quiz.innerHTML+=`<input id="in_jogador"><button onclick="responder8()">RESPONDER</button>`
+        }
 </script>

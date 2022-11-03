@@ -2,7 +2,7 @@
     margin: 0;
 }
 .fundo{
-    background-image: url(./imagens/Beige\ Olive\ Green\ Company\ Fresh\ and\ Friendly\ Company\ Website.png);
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
@@ -50,9 +50,6 @@ li {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 20px;
-    /* background-color: #edf0ece3;
-    margin: 10px 400px;
-    border-radius: 20px;  */
 }
 
 
@@ -63,10 +60,10 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: grey;
+    background-color: #c0c0c0;
     padding: 10px 10px;
-    margin: 10px 275px;
-    box-shadow: 0 7px 10px black;
+    margin: 40px 20px;
+    height: 300px;
 }
 
 .caixa-formulario h1 {
@@ -106,12 +103,11 @@ li {
 
 .campo input {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid gray;
     color: black;
 }
 .campo select{
-    padding: 10px 20px;
-    border: 1px solid black;
+    border: 1px solid grey;
     color: black;
 }
 
@@ -141,10 +137,56 @@ li {
 .container1{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-.pele{
+.caixa-formulario1 {
+
+    padding: 20px 10px;
     display: flex;
-    margin: 20px;
-    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    padding: 10px 1 0px;
+    margin-top: 40px;
+    height: 150px;
+}
+
+.caixa-formulario1 h1 {
+    color: black;
+    margin-bottom: 0px;
+}
+.caixa-formulario2 {
+
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    height: 100px;
+}
+
+.caixa-formulario2 h1 {
+    color: black;
+    margin-bottom: 0px;
+}
+
+.caixa-formulario .campo select{
+    padding: 9px 53px;
+
+}
+#in_data{
+    padding: 8px 40px;
+}
+.caixa-formulario1 .campo select{
+    padding: 9px 35px;
+
+}
+.caixa-formulario1 .campo input{
+    padding: 9px 20px;
+
 }

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sortear()">SORTEIE A SUA SELEÇÃO</button>
+    <div id="div_selecao"></div>
+    
+</body>
+</html>
+<script>
+    function sortear(){
+        var goleiro = parseInt(1+Math.random()*6)
+
+        if(goleiro==1){
+            div_selecao.innerHTML=`<img src="./sorteio/manga.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Manga<br><br>`
+        }else if(goleiro==2){
+            div_selecao.innerHTML=`<img src="./sorteio/gylmar.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Gylmar dos Santos<br><br>`
+        }else if(goleiro==3){
+            div_selecao.innerHTML=`<img src="./sorteio/rodolforodrigues.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Rodolfo Rodrigues<br><br>`
+        }else if(goleiro==4){
+            div_selecao.innerHTML=`<img src="./sorteio/fabiocosta.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Fabio Costa<br><br>`
+        }else if(goleiro==5){
+            div_selecao.innerHTML=`<img src="./sorteio/rafaelcabral.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Rafael Cabral<br><br>`
+        }else{
+            div_selecao.innerHTML=`<img src="./sorteio/joaopaulo.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`João Paulo<br><br>`
+        }
+        var laterald= parseInt(1+Math.random()*3)
+        
+        if(laterald==1){
+            div_selecao.innerHTML+=`<img src="./sorteio/carlosalberto.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Carlos Alberto Torres<br><br>`
+        }else if(laterald==2){
+            div_selecao.innerHTML+=`<img src="./sorteio/maurinho.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Maurinho<br><br>`
+        }else{
+            div_selecao.innerHTML+=`<img src="./sorteio/danilo.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Danilo<br><br>`
+        }
+
+        var zagueiro = parseInt(1+Math.random()*6)
+
+        for(var zag=0;zag<=1;zag++){
+
+            if(zagueiro==1){
+            div_selecao.innerHTML+=`<img src="./sorteio/joelcamargo.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Joel Camargo<br><br>`
+        }else if(zagueiro==2){
+            div_selecao.innerHTML+=`<img src="./sorteio/mauro.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Mauro<br><br>`
+        }else if(zagueiro==3){
+            div_selecao.innerHTML+=`<img src="./sorteio/helvio.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Hélvio<br><br>`
+        }else if(zagueiro==4){
+            div_selecao.innerHTML+=`<img src="./sorteio/alex.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Alex<br><br>`            
+        }else if(zagueiro==5){
+            div_selecao.innerHTML+=`<img src="./sorteio/ramosdelgado.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Ramos Delgado<br><br>`
+        }else{
+            div_selecao.innerHTML+=`<img src="./sorteio/verissimo.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Lucas Veríssimo<br><br>`
+        }
+         zagueiro = parseInt(1+Math.random()*6)
+            
+
+    }
+
+        var laterale= parseInt(1+Math.random()*3)
+
+        if(laterale==1){
+            div_selecao.innerHTML+=`<img src="./sorteio/rildo.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Rildo<br><br>`
+        }else if(laterale==2){
+            div_selecao.innerHTML+=`<img src="./sorteio/dalmo.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Dalmo<br><br>`
+        }else{
+            div_selecao.innerHTML+=`<img src="./sorteio/leo.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Léo<br><br>`
+        }
+
+        var meia=parseInt(1+Math.random()*9)
+
+        for(var meias=0;meias<=2;meias++){
+
+            if(meia==1){
+            div_selecao.innerHTML+=`<img src="./sorteio/clodoaldo.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Clododaldo<br><br>`
+            }else if(meia==2){
+            div_selecao.innerHTML+=`<img src="./sorteio/zito.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Zito<br><br>`
+            }else if(meia==3){
+            div_selecao.innerHTML+=`<img src="./sorteio/pita.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Pita<br><br>`
+            }else if(meia==4){
+            div_selecao.innerHTML+=`<img src="./sorteio/mengalvio.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Mengalvio<br><br>`
+            }else if(meia==5){
+            div_selecao.innerHTML+=`<img src="./sorteio/giovanni.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Giovanni<br><br>`
+            }else if(meia==6){
+            div_selecao.innerHTML+=`<img src="./sorteio/renato.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Renatinho<br><br>`
+            }else if(meia==7){
+            div_selecao.innerHTML+=`<img src="./sorteio/elano.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Elano<br><br>`
+            }else if(meia==8){
+            div_selecao.innerHTML+=`<img src="./sorteio/diego.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Diego<br><br>`
+            }else if(meia==9){
+            div_selecao.innerHTML+=`<img src="./sorteio/arouca.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Arouca<br><br>`
+            } else{
+            div_selecao.innerHTML+=`<img src="./sorteio/ganso.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Ganso<br><br>`
+            }
+            meia=parseInt(1+Math.random()*9)
+        }
+         var ataque=parseInt(1+Math.random()*13)
+
+            for(var ataques=0;ataques<=1;ataques++){
+
+            if(ataque==1){
+            div_selecao.innerHTML+=`<img src="./sorteio/toninho.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Toninho Guerreiro<br><br>`
+            }else if(ataque==2){
+            div_selecao.innerHTML+=`<img src="./sorteio/dorval.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Dorval<br><br>`
+            }else if(ataque==3){
+            div_selecao.innerHTML+=`<img src="./sorteio/neymar.jpeg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Neymar<br><br>`
+            }else if(ataque==4){
+            div_selecao.innerHTML+=`<img src="./sorteio/robinho.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Robinho<br><br>`
+            }else if(ataque==5){
+            div_selecao.innerHTML+=`<img src="./sorteio/ricardooliveira.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Ricardo Oliveira<br><br>`
+            }else if(ataque==6){
+            div_selecao.innerHTML+=`<img src="./sorteio/mclaren.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Paulinho McLaren<br><br>`
+            }else if(ataque==7){
+            div_selecao.innerHTML+=`<img src="./sorteio/guga.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Guga<br><br>`
+            }else if(ataque==8){
+            div_selecao.innerHTML+=`<img src="./sorteio/coutinho.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Coutinho<br><br>`
+            }else if(ataque==9){
+            div_selecao.innerHTML+=`<img src="./sorteio/edu.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Edu<br><br>`
+            }else if(ataque==10){
+            div_selecao.innerHTML+=`<img src="./sorteio/pepe.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Pepe<br><br>`
+            }else if(ataque==11){
+            div_selecao.innerHTML+=`<img src="./sorteio/chulapa.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Serginho Chulapa<br><br>`
+            }else if(ataque==12){
+            div_selecao.innerHTML+=`<img src="./sorteio/juary.jpeg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Juary<br><br>`
+            }else{
+            div_selecao.innerHTML+=`<img src="./sorteio/kleberpereira.webp" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Kleber Pereira<br><br>`        
+            }
+            ataque=parseInt(1+Math.random()*13)
+         }
+
+
+            div_selecao.innerHTML+=`<img src="./sorteio/pele.jpg" alt="" height="100px"><br>`
+            div_selecao.innerHTML+=`Pelé<br><br>` 
+        }
+    
+</script>

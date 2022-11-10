@@ -2,7 +2,7 @@
     margin: 0;
 }
 .fundo{
-    background-color: white;
+    background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
@@ -42,6 +42,14 @@ li {
     color: #ffffff;
 
 }
+li a{
+    color: #e1e1e1 ;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
 .navbar{
     display: flex;
     flex-direction: row;
@@ -63,7 +71,8 @@ li {
     background-color: #c0c0c0;
     padding: 10px 10px;
     margin: 40px 20px;
-    height: 300px;
+    height: 400px;
+    box-shadow: 7px 7px 5px black;
 }
 
 .caixa-formulario h1 {
@@ -99,6 +108,7 @@ li {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
 }
 
 .campo input {
@@ -115,6 +125,7 @@ li {
     color: #000000;
     font-family: sans-serif;
     margin: 15px 0px;
+    
 }
 
 .caixa-formulario button {
@@ -151,6 +162,7 @@ li {
     padding: 10px 1 0px;
     margin-top: 40px;
     height: 150px;
+    box-shadow: 7px 7px 5px black;
 }
 
 .caixa-formulario1 h1 {
@@ -167,7 +179,8 @@ li {
     background-color: #c0c0c0;
     padding: 10px 10px;
     margin: 10px 0px;
-    height: 100px;
+    height: 200px;
+    box-shadow: 7px 7px 5px black;
 }
 
 .caixa-formulario2 h1 {
@@ -189,4 +202,18 @@ li {
 .caixa-formulario1 .campo input{
     padding: 9px 20px;
 
+}
+
+.cx{
+    display: flex;
+    flex-direction: row;
+}
+
+.caixas5{
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-formulario2 button{
+    margin: 0px;
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="./imagens/logo.png">
-    <title>Cadastro</title>
+    <title>Santos</title>
     <link rel="stylesheet" href="cadastro3.css">
 </head>
 <body>
@@ -13,15 +13,13 @@
         <div class="container">
             <div class="navbar">
                 <ul>
-                    <li><b>HISTÓRIA</b></li>
-                    <li><b>QUIZ</b></li>
-                    <li><b>AVALIAÇÃO</b></li>
+                    <li><b><a href="./historia.html">HISTÓRIA</a></b></li>
+                    <li><b><a href="./quiz.html">QUIZ</a></b></li>
                 </ul>
-                <img src="./imagens/logo.png" alt=""height="70px">
+                <div class="logo"><a href="index.html"><img src="./imagens/logo.png" alt=""height="70px"></a></div>
                 <ul>
-                <li><b>TORCIDA</b></li>
-                <li><b>CADASTRAR</b></li>
-                <li><b>LOGIN</b></li>
+                <li><b><a href="cadastro3.html">CADASTRAR</a></b></li>
+                <li><b><a href="login.html">LOGIN</a></b></li>
                 </ul>
             </div>
         </div>
@@ -42,13 +40,21 @@
                     </div>
                     <div class="campo">
                         <label for="data">Data de nascimento:</label>
-                        <input type="date" id="in_data" placeholder="Coloque sea data de nascimento">
+                        <input type="date" id="in_data" placeholder="Coloque sua data de nascimento">
+                    </div>
+                    <div class="campo">
+                        <label for="data">Gênero:</label>
+                        <select name="" id="sel_genero"><option value=""></option><option value="Masculino">Masculino</option><option value="Feminino">Feminino</option><option value="Outro">Outro</option></select>
                     </div>
                 </div>
                 <div class="caixa2">
                     <div class="campo">
-                        <label for="genero">Gênero:</label>
-                        <select name="" id="sel_genero"><option value=""></option><option value="Masculino">Masculino</option><option value="Feminino">Feminino</option><option value="Outro">Outro</option></select>
+                        <label for="genero">Nickname:</label>
+                        <input type="email" id="in_tel" placeholder="Coloque seu Nickname">
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="in_tel" placeholder="email@gmail.com">
                     </div>
                     <div class="campo">
                         <label for="email">E-mail:</label>
@@ -187,8 +193,8 @@
         </div>
             </div>
             <div class="caixa-formulario2">
-                <div class="caixas">
-                    <div class="caixa1">
+                <div class="caixas5">
+                    <div class="cx"><div class="caixa1">
                 <div class="campo">
                     <label for="senha">Senha:</label>
                     <input type="senha" id="in_senha" placeholder="*************">
@@ -202,6 +208,7 @@
             </div>
         </div>
         <button onclick="cadastro()"><b>CADASTRAR</b></button>
+        </div>  
             </div>
         </div>
             </div>

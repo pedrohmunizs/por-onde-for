@@ -2,7 +2,7 @@
     margin: 0;
 }
 .fundo{
-    background-image:url(./imagens/vila.jpg) ;
+    background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
@@ -42,6 +42,14 @@ li {
     color: #ffffff;
 
 }
+li a{
+    color: #e1e1e1 ;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
 .navbar{
     display: flex;
     flex-direction: row;
@@ -66,8 +74,8 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: gray;
-    box-shadow: 0 7px 10px black;
+    background-color: #c0c0c0;
+    box-shadow: 7px 0px 5px black;
     
 
     
@@ -119,7 +127,6 @@ li {
     align-items: center;
     justify-content: center;
     background-color: black;
-    box-shadow: 0 7px 10px black;
 }
 .cadastrar{
     margin-top: 16px;

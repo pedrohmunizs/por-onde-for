@@ -42,23 +42,17 @@
                         <label for="data">Data de nascimento:</label>
                         <input type="date" id="in_data" placeholder="Coloque sua data de nascimento">
                     </div>
+                   
+                </div>
+                <div class="caixa2">
+                   
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="in_tel" placeholder="email@gmail.com">
+                    </div>
                     <div class="campo">
                         <label for="data">Gênero:</label>
                         <select name="" id="sel_genero"><option value=""></option><option value="Masculino">Masculino</option><option value="Feminino">Feminino</option><option value="Outro">Outro</option></select>
-                    </div>
-                </div>
-                <div class="caixa2">
-                    <div class="campo">
-                        <label for="genero">Nickname:</label>
-                        <input type="email" id="in_tel" placeholder="Coloque seu Nickname">
-                    </div>
-                    <div class="campo">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="in_tel" placeholder="email@gmail.com">
-                    </div>
-                    <div class="campo">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="in_tel" placeholder="email@gmail.com">
                     </div>
                 </div>
             </div>
@@ -69,36 +63,44 @@
                 <div class="caixas">
                     <div class="caixa1">
                 <div class="campo">
-                    <label for="nome">Estado:</label>
-                    <select name="" id="sel_estado">
+                    <label for="tel">Jogador que menos gosta:</label>
+                    <select name="" id="sel_ngosta">
                         <option value=""></option>
-                        <option value="AC">AC</option>
-                        <option value="AL">AL</option>
-                        <option value="AP">AP</option>
-                        <option value="AM">AM</option>
-                        <option value="BA">BA</option>
-                        <option value="CE">CE</option>
-                        <option value="DF">DF</option>
-                        <option value="ES">ES</option>
-                        <option value="GO">GO</option>
-                        <option value="MA">MA</option>
-                        <option value="MT">MT</option>
-                        <option value="MS">MS</option>
-                        <option value="MG">MG</option>
-                        <option value="PA">PA</option>
-                        <option value="PB">PB</option>
-                        <option value="PR">PR</option>
-                        <option value="PE">PE</option>
-                        <option value="PI">PI</option>
-                        <option value="RJ">RJ</option>
-                        <option value="RN">RN</option>
-                        <option value="RS">RS</option>
-                        <option value="RO">RO</option>
-                        <option value="RR">RR</option>
-                        <option value="SC">SC</option>
-                        <option value="SP">SP</option>
-                        <option value="SE">SE</option>
-                        <option value="TO">TO</option>
+                        <option value="Edu Araujo">Edu Araujo</option>
+                        <option value="John">John</option>
+                        <option value="Diogenes">Diogenes</option>
+                        <option value="João Paulo">João Paulo</option>
+                        <option value="Paulo Mazoti">Paulo Mazoti</option>
+                        <option value="Luiz Felipe">Luiz Felipe</option>
+                        <option value="Felipe Jonatan">Felipe Jonatan</option>
+                        <option value="Bauermann">Bauermann</option>
+                        <option value="Madson">Madson</option>
+                        <option value="Nathan">Nathan</option>
+                        <option value="Auro">Auro</option>
+                        <option value="Derick">Derick</option>
+                        <option value="Maicon">Maicon</option>
+                        <option value="Lucas Pires">Lucas Pires</option>
+                        <option value="Alex">Alex</option>
+                        <option value="Carabajal">Carabajal</option>
+                        <option value="Ed Carlos">Ed Carlos</option>
+                        <option value="Sandry">Sandry</option>
+                        <option value="Sánchez">Sánchez</option>
+                        <option value="Jhojan Julio">Jhojan Julio</option>
+                        <option value="Soteldo">Soteldo</option>
+                        <option value="Rodrigo Fernández">Rodrigo Fernández</option>
+                        <option value="Zanocelo">Zanocelo</option>
+                        <option value="Lucas Barbosa">Lucas Barbosa</option>
+                        <option value="Baliero">Baliero</option>
+                        <option value="Camacho">Camacho</option>
+                        <option value="Miguelito">Miguelito</option>
+                        <option value="Taison">Taison</option>
+                        <option value="Marcos Leonardo">Marcos Leonardo</option>
+                        <option value="Ângelo">Ângelo</option>
+                        <option value="Rwan Seco">Rwan Seco</option>
+                        <option value="Bryan Angulo">Bryan Angulo</option>
+                        <option value="Luan">Luan</option>
+                        <option value="Lucas Braga">Lucas Braga</option>
+                        <option value="Patati">Patati</option>
                     </select>
                 </div>
                 <div class="campo">
@@ -144,49 +146,15 @@
                 </div>
             </div>
             <div class="caixa2">
+                
                 <div class="campo">
-                    <label for="email">Cidade:</label>
-                    <input type="text" id="in_cidade"placeholder="Insira sua Cidade">
-                </div>
-                <div class="campo">
-                    <label for="tel">Jogador que menos gosta:</label>
-                    <select name="" id="sel_ngosta">
+                    
+                    <label for="nome">De onde é:</label>
+                    <select name="" id="sel_estado" onkeyup="alterar()">
                         <option value=""></option>
-                        <option value="Edu Araujo">Edu Araujo</option>
-                        <option value="John">John</option>
-                        <option value="Diogenes">Diogenes</option>
-                        <option value="João Paulo">João Paulo</option>
-                        <option value="Paulo Mazoti">Paulo Mazoti</option>
-                        <option value="Luiz Felipe">Luiz Felipe</option>
-                        <option value="Felipe Jonatan">Felipe Jonatan</option>
-                        <option value="Bauermann">Bauermann</option>
-                        <option value="Madson">Madson</option>
-                        <option value="Nathan">Nathan</option>
-                        <option value="Auro">Auro</option>
-                        <option value="Derick">Derick</option>
-                        <option value="Maicon">Maicon</option>
-                        <option value="Lucas Pires">Lucas Pires</option>
-                        <option value="Alex">Alex</option>
-                        <option value="Carabajal">Carabajal</option>
-                        <option value="Ed Carlos">Ed Carlos</option>
-                        <option value="Sandry">Sandry</option>
-                        <option value="Sánchez">Sánchez</option>
-                        <option value="Jhojan Julio">Jhojan Julio</option>
-                        <option value="Soteldo">Soteldo</option>
-                        <option value="Rodrigo Fernández">Rodrigo Fernández</option>
-                        <option value="Zanocelo">Zanocelo</option>
-                        <option value="Lucas Barbosa">Lucas Barbosa</option>
-                        <option value="Baliero">Baliero</option>
-                        <option value="Camacho">Camacho</option>
-                        <option value="Miguelito">Miguelito</option>
-                        <option value="Taison">Taison</option>
-                        <option value="Marcos Leonardo">Marcos Leonardo</option>
-                        <option value="Ângelo">Ângelo</option>
-                        <option value="Rwan Seco">Rwan Seco</option>
-                        <option value="Bryan Angulo">Bryan Angulo</option>
-                        <option value="Luan">Luan</option>
-                        <option value="Lucas Braga">Lucas Braga</option>
-                        <option value="Patati">Patati</option>
+                        <option value="Da Baxada santista">Da Baxada santista</option>
+                        <option value="Não é da baixada mais é de São Paulo">Não é da baixada mais é de São Paulo</option>
+                        <option value="De outro Estado">De outro Estado</option>
                     </select>
                 </div>
             </div>
@@ -207,11 +175,19 @@
                 </div>
             </div>
         </div>
-        <button onclick="cadastro()"><b>CADASTRAR</b></button>
-        </div>  
+    </div>  
+    <button onclick="cadastro()"><b>CADASTRAR</b></button>
             </div>
         </div>
             </div>
         </div>
     </body>
     </html>
+    <script>
+        function alterar(){
+            if(sel_estado.value='SP'){
+                div_cidade.innerHTML=''
+                div_cidade.innerHTML=`<select name="" id="sel_litoral"><option value=""></option><option value="Sou da Baixada">Sou da Baixada</option><option value="Não sou da Baixada">Não sou da Baixada</option></select>`
+            }
+        }
+    </script>

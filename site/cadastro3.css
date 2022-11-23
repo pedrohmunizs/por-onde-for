@@ -2,7 +2,7 @@
     margin: 0;
 }
 .fundo{
-    background-color: grey;
+    background-image: url(./imagens/vila.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
@@ -216,4 +216,10 @@ li a{
 
 .caixa-formulario2 button{
     margin: 0px;
+    padding: 0px 160px;
+    
+}
+
+#sel_estado{
+    width: 209px;
 }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/nota.css">
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    <div class="tudo">
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo"><a href="index.html"><img src="./imagens/logo.png" alt=""height="70px"></a></div>
+                <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+                <li><b><a href="./quizdash.html">QUIZ</a></b></li>
+                <li><b><a href="./dashboard.html">SITE</a></b></li>
+                <li><b><a href="./nota.html">AVALIACAO</a></b></li>
+                <li><b><a href="./torcedor.html">TORCEDOR</a></b></li>
+                <div class="sair"><li><b><a href="login.html">SAIR</a></b></li></div>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        
+        <div class="caixa-formulario">
+            <img src="./imagens/santos.png" alt="" height="170px">
+            <h3>Escreva o que você acho sobre o nosso site</h3>
+            <input id="in_nota">
+            <h3>Quantas estrela você da para o site?</h3>
+            <select name="" id="sel_avaliacao" onchange="repetir()">
+                <option value=""></option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div id="div_resultado"></div>
+            <button onclick="avaliar()">Avaliar</button>
+        </div>
+        <div id="div_aguardar" class="loading-div">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    function repetir(){
+
+        div_resultado.innerHTML=''
+        var estrela=Number(sel_avaliacao.value)
+
+        for(var contador=1;contador<=estrela;contador++){
+            div_resultado.innerHTML+=`<img src="./imagens/estrela.webp" alt="" height="20px">`
+        }   
+    }
+    function avaliar(){
+    
+    aguardar()
+
+    
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var notaVar =Number(sel_avaliacao.value);
+
+    // Enviando o valor da nova input
+    fetch("/avaliacao/avaliar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            notaServer: notaVar,
+            fkusuario:sessionStorage.IDUSUARIO_USUARIO
+            
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+
+           
+            
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+    });
+
+    return false;
+}
+
+
+    
+</script>

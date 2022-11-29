@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+}
+.fundo{
+    background-image: url(./img/vila.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    margin: 0px;
+  
+  }
+  .header {
+    padding: 15px;
+    border-bottom: 2px solid #ffffff;
+    background-color: black;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #32b9cd;
+    font-weight: 900;
+
+}
+
+ul {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    list-style: none;
+    padding: 5px 0;
+    margin: 25px;
+}
+
+li {
+    color: #ffffff;
+
+}
+li a{
+    color: #e1e1e1 ;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+}
+.container1 {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+
+.caixa-formulario {
+
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    padding: 10px 10px;
+    margin: 40px 20px;
+    height: 400px;
+    box-shadow: 7px 7px 5px black;
+}
+
+.caixa-formulario h1 {
+    color: black;
+    margin-bottom: 0px;
+}
+.caixa1{
+    
+    padding: 50px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.caixa1 h1{
+    color: black;
+    margin-bottom: 0px;
+}
+.caixa2{
+    
+    padding: 50px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.campo input {
+    padding: 10px;
+    border: 1px solid gray;
+    color: black;
+}
+.campo select{
+    border: 1px solid grey;
+    color: black;
+}
+
+.campo label {
+    color: #000000;
+    font-family: sans-serif;
+    margin: 15px 0px;
+    
+}
+
+.caixa-formulario button {
+    margin-top: 10px;
+    width: 120px;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+.caixas{
+    display: flex;
+    flex-direction: row;
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.caixa-formulario1 {
+
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    padding: 10px 1 0px;
+    margin-top: 40px;
+    height: 150px;
+    box-shadow: 7px 7px 5px black;
+}
+
+.caixa-formulario1 h1 {
+    color: black;
+    margin-bottom: 0px;
+}
+.caixa-formulario2 {
+
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    height: 200px;
+    box-shadow: 7px 7px 5px black;
+}
+
+.caixa-formulario2 h1 {
+    color: black;
+    margin-bottom: 0px;
+}
+
+.caixa-formulario .campo select{
+    padding: 9px 53px;
+
+}
+#in_data{
+    padding: 8px 40px;
+}
+.caixa-formulario1 .campo select{
+    padding: 9px 35px;
+
+}
+.caixa-formulario1 .campo input{
+    padding: 9px 20px;
+
+}
+
+.cx{
+    display: flex;
+    flex-direction: row;
+}
+
+.caixas5{
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-formulario2 button{
+    margin: 0px;
+    padding: 0px 160px;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+}
+
+#sel_estado{
+    width: 209px;
+}
+
+.alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: 3px solid;
+    padding: 10px;
+    margin-right: 80%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }

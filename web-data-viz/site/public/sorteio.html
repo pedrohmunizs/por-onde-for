@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/sorteio.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><b><a href="./historia.html">HISTÓRIA</a></b></li>
+                    <li><b><a href="./sorteio.html">SELESANTOS</a></b></li>
+                </ul>
+                <div class="logo"><a href="index.html"><img src="./imagens/logo.png" alt=""height="70px"></a></div>
+                <ul>
+                <li><b><a href="cadastro.html">CADASTRAR</a></b></li>
+                <li><b><a href="login.html">LOGIN</a></b></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="fundo">
+    <div class="container1">
+        <div id="div_texto"><div class="texto">
+            <h1>Selesantos</h1>
+            <br>
+        <p>Que o Santos é uma seleção todo mundo já sabe, gerações brilhantes que desfilaram o seu futebol pelo mundo inteiro marcaram a história do futebol, jogadores como Pelé, Pepe, Zito, Carlos Alberto e Neymar já estão eternizados. Agora você pode sortear a sua seleção historica no Santos.</p>
+        <br>
+        <button onclick="sortear()">SORTEIE A SUA SELEÇÃO</button>
+        </div></div>
+        <div class="caixa">
+    
+
+    <div class="goleiro"><div id="div_goleiro"></div></div>
+    <div id="div_selecao"></div>
+    <div class="zag"><div class="zagueiro"><div id="div_zagueiro"></div></div></div>
+    <div id="div_selecao"></div>
+    <div class="lateral"><div id="div_lateral"></div></div>
+    <div id="div_selecao"></div>
+    <div class="meia"><div id="div_meia"></div></div>
+    <div id="div_selecao"></div>
+    <div class="ata"><div class="ataque"><div id="div_ataque"></div></div></div>
+    <div id="div_pele"></div>
+</div>
+    <div id="escalacao"></div>
+
+</div>
+</div>
+</body>
+</html>
+<script>
+    function sortear(){
+        div_texto.innerHTML=''
+        div_goleiro.innerHTML=''
+        div_zagueiro.innerHTML=''
+        div_lateral.innerHTML=''
+        div_meia.innerHTML=''
+        div_selecao.innerHTML=''
+        div_ataque.innerHTML=''
+        div_pele.innerHTML=''
+        escalacao.innerHTML=''
+        
+
+        var goleiro = parseInt(1+Math.random()*6)
+
+        if(goleiro==1){
+            div_goleiro.innerHTML=`<img src="./assets/sorteio/manga.png" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Goleiro: Manga<br><br>`
+        }else if(goleiro==2){
+            div_goleiro.innerHTML=`<img src="./assets/sorteio/gylmar.jpg" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Goleiro: Gylmar dos Santos<br><br>`
+        }else if(goleiro==3){
+            div_goleiro.innerHTML=`<img src="./assets/sorteio/rodolforodrigues.png" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Goleiro: Rodolfo Rodrigues<br><br>`
+        }else if(goleiro==4){
+            div_goleiro.innerHTML=`<img src="./assets/sorteio/fabiocosta.png" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Goleiro: Fabio Costa<br><br>`
+        }else if(goleiro==5){
+            div_goleiro.innerHTML=`<img src="./assets/sorteio/rafaelcabral.jpg" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Goleiro: Rafael Cabral<br><br>`
+        }else{
+            div_goleiro.innerHTML=`<img src="./assets/sorteio/joaopaulo.png" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Goleiro: João Paulo<br><br>`
+            
+        }
+        
+        var laterald= parseInt(1+Math.random()*3)
+        
+        if(laterald==1){
+            div_lateral.innerHTML+=`<img src="./assets/sorteio/carlosalberto.jpg" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Lateral Direito: Carlos Alberto Torres<br><br>`
+        }else if(laterald==2){
+            div_lateral.innerHTML+=`<img src="./assets/sorteio/maurinho.png" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Lateral Direito: Maurinho<br><br>`
+        }else{
+            div_lateral.innerHTML+=`<img src="./assets/sorteio/danilo.jpg" alt="" height="80px"><br>`
+            escalacao.innerHTML+=`Lateral Direito: Danilo<br><br>`
+        }
+
+        var zagr=0
+        var zagueiro = parseInt(1+Math.random()*6)
+        for(var zag=0;zag<=1;zag++){
+            if(zagueiro==zagr){
+                for(z=0;z<=10;z++){
+                    if(zagueiro==zagr){
+                        zagueiro = parseInt(1+Math.random()*6)
+                    }else{
+                        break       
+                    }
+                }
+            }
+
+
+        if(zagueiro==1){
+            div_zagueiro.innerHTML+=`<img src="./assets/sorteio/joelcamargo.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Zagueiro: Joel Camargo<br><br>`
+        }else if(zagueiro==2){
+            div_zagueiro.innerHTML+=`<img src="./assets/sorteio/mauro.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Zagueiro: Mauro<br><br>`
+        }else if(zagueiro==3){
+            div_zagueiro.innerHTML+=`<img src="./assets/sorteio/helvio.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Zagueiro: Hélvio<br><br>`
+        }else if(zagueiro==4){
+            div_zagueiro.innerHTML+=`<img src="./assets/sorteio/alex.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Zagueiro: Alex<br><br>`            
+        }else if(zagueiro==5){
+            div_zagueiro.innerHTML+=`<img src="./assets/sorteio/ramosdelgado.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Zagueiro: Ramos Delgado<br><br>`
+        }else{
+            div_zagueiro.innerHTML+=`<img src="./assets/sorteio/verissimo.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Zagueiro: Lucas Veríssimo<br><br>`
+        }
+        zagr=zagueiro
+         zagueiro = parseInt(1+Math.random()*6)
+
+    }
+    
+        var laterale= parseInt(1+Math.random()*3)
+
+        if(laterale==1){
+            div_lateral.innerHTML+=`<img src="./assets/sorteio/rildo.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Lateral Esquerdo: Rildo<br><br>`
+        }else if(laterale==2){
+            div_lateral.innerHTML+=`<img src="./assets/sorteio/dalmo.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Lateral Esquerdo: Dalmo<br><br>`
+        }else{
+            div_lateral.innerHTML+=`<img src="./assets/sorteio/leo.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Lateral Esquerdo: Léo<br><br>`
+        }
+
+       
+        var meic=0
+        for(var meias=0;meias<=1;meias++){
+            var meic=meia
+            var meia=parseInt(Math.floor(1+Math.random()*10))
+            for(var mei=0;mei<=1;mei++){
+            if(meia==meic){
+                for(z=0;z<=10;z++){
+                    if(meia==meic){
+                        meia = parseInt(1+Math.random()*10)
+                    }else{
+                        break       
+                    }
+                }
+            }
+        }
+            
+            if(meia==1){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/clodoaldo.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Clododaldo<br><br>`
+            }else if(meia==2){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/zito.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Zito<br><br>`
+            }else if(meia==3){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/pita.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Pita<br><br>`
+            }else if(meia==4){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/mengalvio.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Mengalvio<br><br>`
+            }else if(meia==5){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/giovanni.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Giovanni<br><br>`
+            }else if(meia==6){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/renato.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Renatinho<br><br>`
+            }else if(meia==7){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/elano.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Elano<br><br>`
+            }else if(meia==8){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/diego.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Diego<br><br>`
+            }else if(meia==9){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/arouca.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Arouca<br><br>`
+            } else{
+            div_meia.innerHTML+=`<img src="./assets/sorteio/ganso.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Ganso<br><br>`
+            }
+            
+        }
+            
+        
+
+
+            if(meia==1){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/clodoaldo.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Clododaldo<br><br>`
+            }else if(meia==2){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/zito.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Zito<br><br>`
+            }else if(meia==3){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/pita.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Pita<br><br>`
+            }else if(meia==4){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/mengalvio.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Mengalvio<br><br>`
+            }else if(meia==5){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/giovanni.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Giovanni<br><br>`
+            }else if(meia==6){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/renato.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Renatinho<br><br>`
+            }else if(meia==7){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/elano.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Elano<br><br>`
+            }else if(meia==8){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/diego.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Diego<br><br>`
+            }else if(meia==9){
+            div_meia.innerHTML+=`<img src="./assets/sorteio/arouca.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Arouca<br><br>`
+            } else{
+            div_meia.innerHTML+=`<img src="./assets/sorteio/ganso.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Meio-campista: Ganso<br><br>`
+            }
+        
+
+       
+         var ataque=parseInt(1+Math.random()*13)
+         var ata=0
+            for(var ataques=0;ataques<=1;ataques++){
+                if(ataque==ata){
+                for(var a=0;a<=10;a++){
+                    if(ataque==ata){
+                        ataque = parseInt(1+Math.random()*13)
+                    }else{
+                        break       
+                    }
+                }
+            }
+            if(ataque==1){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/toninho.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Toninho Guerreiro<br><br>`
+            }else if(ataque==2){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/dorval.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Dorval<br><br>`
+            }else if(ataque==3){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/neymar.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Neymar<br><br>`
+            }else if(ataque==4){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/robinho.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Robinho<br><br>`
+            }else if(ataque==5){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/ricardooliveira.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Ricardo Oliveira<br><br>`
+            }else if(ataque==6){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/mclaren.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Paulinho McLaren<br><br>`
+            }else if(ataque==7){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/guga.webp" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Guga<br><br>`
+            }else if(ataque==8){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/coutinho.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Coutinho<br><br>`
+            }else if(ataque==9){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/edu.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Edu<br><br>`
+            }else if(ataque==10){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/pepe.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Pepe<br><br>`
+            }else if(ataque==11){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/chulapa.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Serginho Chulapa<br><br>`
+            }else if(ataque==12){
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/juary.jpeg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Juary<br><br>`
+            }else{
+            div_ataque.innerHTML+=`<img src="./assets/sorteio/kleberpereira.jpg" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Kleber Pereira<br><br>`        
+            }
+            ata=ataque
+            ataque=parseInt(1+Math.random()*13)
+         }
+
+
+            div_pele.innerHTML+=`<img src="./assets/sorteio/pele.png" alt="" height="80px">`
+            escalacao.innerHTML+=`Atacante: Pelé<br><br>`
+            
+            escalacao.innerHTML+=`<br><button onclick="sortear()">SORTEIE A SUA SELEÇÃO NOVAMENTE</button>`
+        }
+    
+</script>

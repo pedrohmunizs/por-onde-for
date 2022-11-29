@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="tudo">
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo"><a href="index.html"><img src="./imagens/logo.png" alt="" height="70px"></a></div>
+                    <div class="hello">
+                        <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                    </div>
+                    <li><b><a href="./quizdash.html">QUIZ</a></b></li>
+                    <li><b><a href="./dashboard.html">SITE</a></b></li>
+                    <li><b><a href="./nota.html">AVALIACAO</a></b></li>
+                    <li><b><a href="./torcedor.html">TORCEDOR</a></b></li>
+                    <div class="sair">
+                        <li><b><a href="login.html">SAIR</a></b></li>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container1">
+            <div class="grfc">
+            <canvas id="grafico" style="width: 20px;"></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    window.onload = obterDadosGrafico();
+
+    function obterDadosGrafico() {
+
+
+        fetch(`/medidas/ultimas`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+    function plotarGrafico(resposta) {
+        console.log('iniciando plotagem do gráfico...');
+
+        // Criando estrutura para plotar gráfico - labels
+        let labels = [];
+
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Voto',
+                data: [],
+                fill: false,
+                backgroundColor: [
+                    'rgb(255, 205, 86)',
+                    'rgb(0, 255, 0)',
+                    'rgb(54, 162, 235)',
+                    'rgb(248, 90, 0)',
+                    'rgb(122, 40, 163)'
+                ],
+                hoverOffset: 4
+            }
+            ]
+        };
+
+        console.log('----------------------------------------------')
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+        console.log(resposta)
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+        for (i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.nota);
+            dados.datasets[0].data.push(registro.qtd_nota);
+        }
+
+        console.log('----------------------------------------------')
+        console.log('O gráfico será plotado com os respectivos valores:')
+        console.log('Labels:')
+        console.log(labels)
+        console.log('Dados:')
+        console.log(dados.datasets)
+        console.log('----------------------------------------------')
+
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: 'pie',
+            data: dados,
+        };
+
+        // Adicionando gráfico criado em div na tela
+        let grafico = new Chart(
+            document.getElementById('grafico'),
+            config
+        );
+
+    }
+
+
+</script>

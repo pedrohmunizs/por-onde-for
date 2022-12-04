@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-right: 3px solid #32b9cd;
+    border-right: 3px solid yellow;
     background-color: #212124;
     list-style: none;
 }
@@ -100,19 +100,51 @@ li a{
 }
 
 .favorito{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 250px;
+    background-color: grey;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 7px 0px 5px black;
 }
 
 .ngosta{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 250px;
+    background-color: grey;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 7px 0px 5px black;
 }
 
 .genero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 250px;
+    background-color: grey;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 7px 0px 5px black;
 }
 
 .local{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 250px;
+    background-color: grey;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 7px 0px 5px black;
 }
 
 .cima{

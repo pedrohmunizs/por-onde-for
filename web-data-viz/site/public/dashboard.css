@@ -79,3 +79,9 @@ li a{
 element.style {
     width: 20px;
 }
+
+.grfc2{
+    width: 200px;
+    height: 200px;
+    margin-left: 300px;
+}

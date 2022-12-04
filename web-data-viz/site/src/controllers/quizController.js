@@ -1,4 +1,23 @@
 var quizModel = require("../models/quizModel");
+
+function buscarUltimasMedidas2(req, res) {
+
+    var idquiz = req.params.idquiz;
+
+    console.log(`Recuperando as ultimas medidas`);
+
+    quizModel.buscarUltimasMedidas2(idquiz).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
  
 function pontuacao(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
@@ -32,5 +51,6 @@ function pontuacao(req, res) {
 
 
 module.exports = {
+    buscarUltimasMedidas2,
     pontuacao
 }

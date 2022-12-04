@@ -1,0 +1,145 @@
+*{
+    font-family: "Exo 2", sans-serif;    font-family: "Exo 2", sans-serif;
+}
+.janela{
+    display: flex;
+    width: 100vw
+}
+
+.header-left{
+position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100vh;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 3px solid #115639;
+    background-color: #115639;
+}
+.dash-right{
+    display: flex;
+    width: 63%;
+    height: fit-content;
+    background-color: white;
+    position: relative;
+    top: 0;
+    left: 25%;
+}
+
+.dash-right .avisos{
+    width: 100%;
+    /* border: 3px solid pink; */
+    color: rgb(216, 216, 216);
+    font-family: "Exo 2", sans-serif;
+}
+
+input{
+    margin-bottom: 10px;
+    border: 2px solid #115639;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.dash-right .avisos .div-form textarea{
+    width: 100%;
+    /* color: #E6005A; */
+    border: 3px solid #5eb160;
+    background-color: white;
+    border-radius: 5px;
+}
+.dash-right .avisos .container .div-form {
+    width: 100%;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.dash-right .avisos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-results {
+    width: 100%;
+}
+
+.div-results .feed-container {
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 80px;
+}
+
+.dash-right .avisos .div-form input {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.dash-right .avisos .div-form button {
+    cursor: pointer;
+    font-family: "Exo 2", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #5eb160;
+    width: 120px;
+}
+h1{
+    color: #115639;
+}
+
+label{
+    color: black;
+}
+span{
+    color: black;
+}
+
+ul {
+    width: 100%;
+    margin-right: 100px;
+    margin-left: 0px;
+}
+
+ul li {
+    text-decoration: none;
+    list-style: none;
+    margin: 5px;
+    color: #fff;
+    width: 100%;
+    transition: all 0.8s;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    width: 50px;
+    display: flex;
+    margin-left: 0px;
+}
+
+span {
+    margin: 10px;
+}
+
+ul li:hover {
+    background: #fff;
+    border-radius: 10px;
+    color: #115639;
+}
+
+ul li:hover a {
+    color: #115639;
+}
+

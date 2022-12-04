@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -29,7 +30,7 @@ h1 {
 
 }
 
-ul {
+.header ul {
     display: flex;
     width: 350px;
     justify-content: space-between;
@@ -38,11 +39,11 @@ ul {
     margin: 25px;
 }
 
-li {
+.header li {
     color: #ffffff;
 
 }
-li a{
+.header li a{
     color: #e1e1e1 ;
     cursor: pointer;
     text-decoration: none;
@@ -62,7 +63,9 @@ li a{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #c0c0c0;
-    
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 25px solid black;
+    border-right: 25px solid black;    
 }
 .texto{
     height: 50%;
@@ -87,7 +90,7 @@ li a{
     height: 50%;
     width: 50%;
     margin-left: 50px;
-    margin-top: 150px;
+    margin-top: 13%;
 }
 .container2 {
     height: 100%;
@@ -96,6 +99,9 @@ li a{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #c0c0c0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 25px solid black;
+    border-right: 25px solid black;
 }
 
 .texto2{
@@ -123,5 +129,138 @@ li a{
     height: 50%;
     width: 50%;
     margin-left: 50px;
-    margin-top: 150px;
+    margin-top: 13%;
+}
+
+.eventos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    padding-top: 10px;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.eventos2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    padding-top: 10px;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.container0 ul{
+    display: flex;
+    list-style: none;
+}
+
+.container0 li {
+    color: #e1e1e1 ;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 20px;
+}
+
+.container0 li{
+    color: black;
+}
+
+.container0 a{
+    color: #e1e1e1 ;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+#decada10{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada20{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada30{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada40{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada50{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada60{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada70{
+    display: flex;
+    flex-direction: row;
+}
+
+#guerra{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada80{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada90-1{
+    display: flex;
+    flex-direction: row;
+}
+
+#ano1995{
+    display: flex;
+    flex-direction: row;
+}
+
+#decada90-2{
+    display: flex;
+    flex-direction: row;
+}
+
+#anos2000-1{
+    display: flex;
+    flex-direction: row;
+}
+
+#ano2002{
+    display: flex;
+    flex-direction: row;
+}
+
+#ida{
+    display: flex;
+    flex-direction: row;
+}
+
+#volta{
+    display: flex;
+    flex-direction: row;
+}
+
+#anos2000-2{
+    display: flex;
+    flex-direction: row;
 }

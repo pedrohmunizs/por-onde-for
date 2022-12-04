@@ -155,9 +155,10 @@
 
        
         var meic=0
-        for(var meias=0;meias<=1;meias++){
+        var meias=0
+        var meia=parseInt(Math.floor(1+Math.random()*10))
+        for(meias;meias<=1;meias++){
             var meic=meia
-            var meia=parseInt(Math.floor(1+Math.random()*10))
             for(var mei=0;mei<=1;mei++){
             if(meia==meic){
                 for(z=0;z<=10;z++){
@@ -169,8 +170,9 @@
                 }
             }
         }
-            
-            if(meia==1){
+
+        
+        if(meia==1){
             div_meia.innerHTML+=`<img src="./assets/sorteio/clodoaldo.jpg" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Clododaldo<br><br>`
             }else if(meia==2){
@@ -205,33 +207,45 @@
         }
             
         
-
-
-            if(meia==1){
+        var meic2=0
+        var meias2=0
+        var meia2=parseInt(Math.floor(1+Math.random()*10))
+        for(meias2;meias2<=0;meias2++){
+            if(meic==meia2||meia==meia2){
+                for(z2=0;z2<10;z2++){
+                    if(meic==meia2||meia==meia2){
+                        meia2=parseInt(Math.floor(1+Math.random()*10))
+                    }else{
+                        break
+                    }
+                }
+    
+                }
+            }if(meia2==1){
             div_meia.innerHTML+=`<img src="./assets/sorteio/clodoaldo.jpg" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Clododaldo<br><br>`
-            }else if(meia==2){
+            }else if(meia2==2){
             div_meia.innerHTML+=`<img src="./assets/sorteio/zito.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Zito<br><br>`
-            }else if(meia==3){
+            }else if(meia2==3){
             div_meia.innerHTML+=`<img src="./assets/sorteio/pita.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Pita<br><br>`
-            }else if(meia==4){
+            }else if(meia2==4){
             div_meia.innerHTML+=`<img src="./assets/sorteio/mengalvio.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Mengalvio<br><br>`
-            }else if(meia==5){
+            }else if(meia2==5){
             div_meia.innerHTML+=`<img src="./assets/sorteio/giovanni.jpg" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Giovanni<br><br>`
-            }else if(meia==6){
+            }else if(meia2==6){
             div_meia.innerHTML+=`<img src="./assets/sorteio/renato.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Renatinho<br><br>`
-            }else if(meia==7){
+            }else if(meia2==7){
             div_meia.innerHTML+=`<img src="./assets/sorteio/elano.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Elano<br><br>`
-            }else if(meia==8){
+            }else if(meia2==8){
             div_meia.innerHTML+=`<img src="./assets/sorteio/diego.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Diego<br><br>`
-            }else if(meia==9){
+            }else if(meia2==9){
             div_meia.innerHTML+=`<img src="./assets/sorteio/arouca.png" alt="" height="80px">`
             escalacao.innerHTML+=`Meio-campista: Arouca<br><br>`
             } else{

@@ -130,7 +130,7 @@ li a{
 
 .caixa-formulario button {
     margin-top: 10px;
-    width: 120px;
+    width: 0px;
     background-color: black;
     color: #ffffff;
     padding: 10px;
@@ -180,6 +180,7 @@ li a{
     padding: 10px 10px;
     margin: 10px 0px;
     height: 200px;
+    width: 250px;
     box-shadow: 7px 7px 5px black;
 }
 
@@ -215,8 +216,8 @@ li a{
 }
 
 .caixa-formulario2 button{
-    margin: 0px;
-    padding: 0px 160px;
+    margin: 10px;
+    padding: 2px 10px;
     background-color: #000000;
     color: white;
     border-radius: 5px;
@@ -246,4 +247,8 @@ li a{
   .card_erro #mensagem_erro{
     font-weight: 500;
     font-size: 20px;
+  }
+
+ select{
+    width: 190px;
   }

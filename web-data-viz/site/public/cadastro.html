@@ -45,8 +45,8 @@
                         <input type="nome" id="in_nome" placeholder="Insira seu Nome">
                     </div>
                     <div class="campo">
-                        <label for="data">Raça:</label>
-                        <select name="" id="sel_raca"><option value=""></option><option value="Branco">Branco</option><option value="Preto">Preto</option><option value="Amarelo">Amarelo</option><option value="Indigena">Indigena</option></select>
+                        <label for="data">Gênero:</label>
+                        <select name="" id="sel_genero"><option value=""></option><option value="Masculino">Masculino</option><option value="Feminino">Feminino</option><option value="Transgênero">Transgênero</option><option value="Não-binário">Não-binário</option><option value="Outro">Outro</option></select>
                     </div>
                 </div>
                 <div class="caixa2"> 
@@ -55,8 +55,13 @@
                         <input type="email" id="in_email" placeholder="email@gmail.com">
                     </div>
                     <div class="campo">
-                        <label for="data">Gênero:</label>
-                        <select name="" id="sel_genero"><option value=""></option><option value="Masculino">Masculino</option><option value="Feminino">Feminino</option><option value="Transgênero">Transgênero</option><option value="Não-binário">Não-binário</option><option value="Outro">Outro</option></select>
+                        <label for="nome">De onde é:</label>
+                        <select name="" id="sel_local">
+                            <option value=""></option>
+                            <option value="Da Baxada santista">Da Baxada santista</option>
+                            <option value="Do estado de São Paulo">Do estado de São Paulo</option>
+                            <option value="De outro Estado">De outro Estado</option>
+                        </select>
                     </div>
                 </div>
             </div> 
@@ -66,8 +71,8 @@
                 <div class="caixas">
                     <div class="caixa1">
                         <div class="campo">
-                            <label for="tel">Jogador que menos gosta:</label>
-                            <select name="" id="sel_ngosta">
+                            <label for="tel">Jogador favorito:</label>
+                            <select name="" id="sel_favorito">
                                 <option value=""></option>
                                 <option value="Edu Araujo">Edu Araujo</option>
                                 <option value="John">John</option>
@@ -107,8 +112,8 @@
                             </select>
                         </div>
                         <div class="campo">
-                            <label for="cnpj">Jogador favorito:</label>
-                            <select name="" id="sel_favorito">
+                            <label for="cnpj">Jogador que menos gosta:</label>
+                            <select name="" id="sel_ngosta">
                                 <option value=""></option>
                                 <option value="Edu Araujo">Edu Araujo</option>
                                 <option value="John">John</option>
@@ -149,43 +154,28 @@
                         </div>
                     </div>
             <div class="caixa2">
-                <div class="campo">
-                    <label for="nome">De onde é:</label>
-                    <select name="" id="sel_local">
-                        <option value=""></option>
-                        <option value="Da Baxada santista">Da Baxada santista</option>
-                        <option value="Do estado de São Paulo">Do estado de São Paulo</option>
-                        <option value="De outro Estado">De outro Estado</option>
-                    </select>
-                </div>
+                
             </div>
         </div>
             </div>
             <div class="caixa-formulario2">
-                <div class="caixas5">
-                    <div class="cx"><div class="caixa1">
                 <div class="campo">
                     <label for="senha">Senha:</label>
                     <input type="password" id="in_senha" placeholder="*************">
                 </div>
-            </div>
-            <div class="caixa2">
                 <div class="campo">
                     <label for="senha">Confirmação de senha:</label>
                     <input type="password" id="in_confirmacao" placeholder="*************">
                 </div>
+                <button onclick="cadastrar()"><b>CADASTRAR</b></button>
             </div>
         </div>
-        <button onclick="cadastrar()"><b>CADASTRAR</b></button>
         </div> 
         <div id="div_aguardar" class="loading-div">
         </div>
 
         <div id="div_erros_login">
 
-        </div> 
-            </div>
-        </div>
             </div>
         </div>
     </body>
@@ -197,16 +187,15 @@
             //Recupere o valor da nova input pelo nome do id
             // Agora vá para o método fetch logo abaixo
             var nomeVar = in_nome.value;
-            var racaVar = sel_raca.value;
             var emailVar = in_email.value;
             var generoVar = sel_genero.value;
-            var ngostaVar = sel_ngosta.value;
-            var favoritoVar = sel_favorito.value;
             var localVar = sel_local.value;
+            var favoritoVar = sel_favorito.value;
+            var ngostaVar = sel_ngosta.value;
             var senhaVar = in_senha.value;
             var confirmacaoSenhaVar = in_confirmacao.value;
     
-            if (nomeVar == "" || racaVar ==""||emailVar==""||generoVar ==""||ngostaVar ==""||favoritoVar ==""|| localVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            if (nomeVar == ""||emailVar==""||generoVar ==""||ngostaVar ==""||favoritoVar ==""|| localVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
                 cardErro.style.display = "block"
                 mensagem_erro.innerHTML = "Campo(s) em branco";
                 
@@ -227,12 +216,11 @@
                     // crie um atributo que recebe o valor recuperado aqui
                     // Agora vá para o arquivo routes/usuario.js
                     nomeServer: nomeVar,
-                    racaServer: racaVar,
                     emailServer: emailVar,
                     generoServer: generoVar,
-                    ngostaServer: ngostaVar,
-                    favoritoServer: favoritoVar,
                     localServer: localVar,
+                    favoritoServer: favoritoVar,
+                    ngostaServer: ngostaVar,
                     senhaServer: senhaVar
                 })
             }).then(function (resposta) {

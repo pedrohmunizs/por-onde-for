@@ -6,7 +6,7 @@ function buscarUltimasMedidas(req, res) {
 
     console.log(`Recuperando as ultimas medidas`);
 
-    medidaModel.buscarUltimasMedidas(idAVALIACAO).then(function (resultado) {
+    avaliacaoModel.buscarUltimasMedidas(idAVALIACAO).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

@@ -2,36 +2,39 @@ CREATE DATABASE SANTOSPI;
 DROP database SANTOSPI;
 USE SANTOSPI;
 
-CREATE TABLE USUARIO (idUSUARIO INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE usuario (id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(45),
-dtnasci date,
 email varchar(75),
 genero varchar(45),
-estado varchar(45),
-favorito varchar(45),
-cidade varchar(45),
 ngosta varchar(45),
+favorito varchar(45),
+local_ varchar(45),
 senha varchar(45)
 );
 
-CREATE TABLE QUIZ (idQUIZ INT AUTO_INCREMENT,
-TOTAL int,
-fkUSUARIO int,
-foreign key(fkUSUARIO) REFERENCES USUARIO(idUSUARIO),
-primary key(idQuiz,fkUSUARIO)
+CREATE TABLE quiz (idquiz INT AUTO_INCREMENT,
+total int,
+fkusuario int,
+foreign key(fkusuario) REFERENCES usuario(id),
+primary key(idquiz,fkusuario)
 );
 
-CREATE TABLE AVALIACAO (idAVALIACAO INT PRIMARY KEY AUTO_INCREMENT,
-NOTA INT,
-fkUSUARIO INT,
-FOREIGN KEY(fkUSUARIO) REFERENCES USUARIO(idUSUARIO)
+CREATE TABLE avaliacao (idavaliacao INT PRIMARY KEY AUTO_INCREMENT,
+nota INT,
+fkusuario INT,
+FOREIGN KEY(fkusuario) REFERENCES usuario(id),
+descricao varchar(250)
 );
 
+
+create table aviso (idAviso int primary key auto_increment,
+fkusuario int,
+foreign key(fkusuario) references usuario(id),
+titulo varchar(45),
+descricao varchar(200)
+);
 
 select * from usuario;
-
-select TOTAL, count(TOTAL) from QUIZ group by TOTAL ORDER BY TOTAL;
-   
 select * from quiz;
-
-select ngosta,count(ngosta) from usuario group by ngosta;
+select * from avaliacao;
+select * from aviso;

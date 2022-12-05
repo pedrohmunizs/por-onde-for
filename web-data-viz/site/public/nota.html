@@ -18,10 +18,13 @@
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
             <li><b><a href="./torcedor.html">TORCEDOR</a></b></li>
-                <li><b><a href="./quizdash.html">QUIZ</a></b></li>
-                <li><b><a href="./nota.html">AVALIACAO</a></b></li>
-                <li><b><a href="./dashboard.html">SITE</a></b></li>
-                <div class="sair"><li><b><a href="login.html">SAIR</a></b></li></div>
+                    <li><b><a href="./mural.html">MURAL</a></b></li>
+                    <li><b><a href="./quizdash.html">QUIZ</a></b></li>
+                    <li><b><a href="./nota.html">AVALIACAO</a></b></li>
+                    <li><b><a href="./dashboard.html">SITE</a></b></li>
+                    <div class="sair">
+                        <li><b><a href="login.html">SAIR</a></b></li>
+                    </div>
             </div>
         </div>
     </div>
@@ -30,7 +33,7 @@
         <div class="caixa-formulario">
             <img src="./imagens/santos.png" alt="" height="170px">
             <h3>Escreva o que você acho sobre o nosso site</h3>
-            <input id="in_nota">
+            <textarea name="avali" id="avali" cols="30" rows="5"></textarea>
             <h3>Quantas estrela você da para o site?</h3>
             <select name="" id="sel_avaliacao" onchange="repetir()">
                 <option value=""></option>
@@ -71,6 +74,7 @@
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var notaVar =Number(sel_avaliacao.value);
+    var avaliaVar= avali.value;
 
     // Enviando o valor da nova input
     fetch("/avaliacao/avaliar", {
@@ -82,7 +86,8 @@
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
             notaServer: notaVar,
-            fkusuario:sessionStorage.IDUSUARIO_USUARIO
+            fkusuario:sessionStorage.IDUSUARIO_USUARIO,
+            avaliaServer:avaliaVar
             
         })
     }).then(function (resposta) {
@@ -92,7 +97,7 @@
         if (resposta.ok) {
             cardErro.style.display = "block";
 
-           
+           window.alert("Avaliação realizada com sucesso");
             
             limparFormulario();
             finalizarAguardar();

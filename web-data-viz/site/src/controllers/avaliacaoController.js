@@ -24,14 +24,17 @@ function avaliar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nota = req.body.notaServer;
     var fkusuario = req.body.fkusuario;
+    var avalia = req.body.avaliaServer;
 
     // Faça as validações dos valores
     if (nota == undefined) {
         res.status(400).send(" Nota não definida");
+    }else if (avalia == undefined) {
+        res.status(400).send(" Avaliação não definida");
     }else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        avaliacaoModel.avaliar(nota, fkusuario)
+        avaliacaoModel.avaliar(nota, fkusuario,avalia)
             .then(
                 function (resultado) {
                     res.json(resultado);

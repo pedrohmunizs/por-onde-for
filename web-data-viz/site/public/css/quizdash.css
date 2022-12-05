@@ -107,7 +107,8 @@ li a{
     align-items: center;
     justify-content: center;
     background-color: #c0c0c0;
-    padding: 10px 10px;
+    height: 160px;
+    padding: 89px 10px;
     box-shadow: 7px 7px 5px black;
     width: 500px;
 }
@@ -118,6 +119,7 @@ li a{
     align-items: center;
     justify-content: center;
     background-color: #c0c0c0;
+    height: 160px;
     padding: 89px 0px;
     box-shadow: 7px 7px 5px black;
 }

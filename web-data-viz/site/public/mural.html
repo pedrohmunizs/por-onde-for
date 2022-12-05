@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Avisos</title>
 
-    <link rel="stylesheet" href="../css/mural.css">
+    <link rel="stylesheet" href="./css/mural.css">
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,72 +24,30 @@
     <div class="janela">
         
 
-        <div class="header-left">
-
-
-            <ul>
-                <li style="background-color: white; border-radius: 10px">
-                    <a href="" style="color: #115639">
-                        <span class="icon">
-                            <ion-icon name="stats-chart-outline"></ion-icon>
-                        </span>
-                        <span class="menu">Gráficos</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <span class="icon">
-                            <ion-icon name="person-outline"></ion-icon>
-                        </span>
-                        <span class="menu">Perfil</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <span class="icon">
-                            <ion-icon name="notifications-outline"></ion-icon>
-                        </span>
-                        <span class="menu">Notificações</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <span class="icon">
-                            <ion-icon name="chatbubbles-outline"></ion-icon>
-                        </span>
-                        <span class="menu">Mensagens</span>
-                    </a>
-                </li>
-                <div class="hello">
-                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo"><a href="index.html"><img src="./imagens/logo.png" alt="" height="70px"></a></div>
+                    <div class="hello">
+                        <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                    </div>
+                    <li><b><a href="./torcedor.html">TORCEDOR</a></b></li>
+                    <li><b><a href="./mural.html">MURAL</a></b></li>
+                    <li><b><a href="./quizdash.html">QUIZ</a></b></li>
+                    <li><b><a href="./nota.html">AVALIACAO</a></b></li>
+                    <li><b><a href="./dashboard.html">SITE</a></b></li>
+                    <div class="sair">
+                        <li><b><a href="login.html">SAIR</a></b></li>
+                    </div>
                 </div>
-                <li>
-                    <a href="">
-                        <span class="icon">
-                            <ion-icon name="help-circle-outline"></ion-icon>
-                        </span>
-                        <span class="menu">Ajuda</span>
-                    </a>
-                </li>
 
-                <li>
-                    <a href="login.html">
-                        <span class="icon">
-                            <ion-icon name="log-out-outline"></ion-icon>
-                        </span>
-                        <span class="menu">Sair</span>
-                    </a>
-                </li>
-            </ul>
+            </div>
         </div>
 
         <div class="dash-right">
 
             <div class="avisos">
-                <div class="container">
+                <div class="container1">
                     <h1>Publicar um aviso</h1>
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">

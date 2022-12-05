@@ -1,15 +1,15 @@
 *{
     margin: 0;
-    font-family: "Exo 2", sans-serif;    font-family: "Exo 2", sans-serif;
 }
 .fundo{
-    background-image: url(./img/Beige\ Olive\ Green\ Company\ Fresh\ and\ Friendly\ Company\ Website.png);
+    background-color: #c0c0c0;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 400vh;
     margin: 0px;
-  
-  }
+    display: flex;
+    flex-direction: column;
+}
   .header {
     padding: 15px;
     border-bottom: 2px solid #ffffff;
@@ -22,14 +22,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    color: #32b9cd;
-    font-weight: 900;
-
-}
 
 ul {
     display: flex;
@@ -57,38 +52,6 @@ li a{
     flex-direction: row;
 }
 
-.container1 {
-    padding: 70px ;
-    height: 00px;
-    display: flex;
-    flex-direction: row;
-}
-.container1 p{
-    color: #ffffff;
-}
-.container1 b{
-    color: #ffffff;
-}
-
-.container1 h1{
-    color: white;
-}
-
-.container1 h3{
-    color: white;
-}
-
-.container1 a{
-    color: #ffffff;
-    background-color: white;
-    width: 20px;
-    padding: 15px 45px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    color: black;
-}
 
 .footer{
     height: 30px;
@@ -99,25 +62,89 @@ li a{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: small;
-  }
+}
   
-  .footer ul {
+.footer ul {
     display: flex;
     list-style: none;
     margin-top: 20px;
     margin-bottom: 50px;
     justify-content: center;
 
-  }
+}
   
-  .footer ul li {
+.footer ul li {
     color: #fff;
     font-size: medium;
-  }
+}
   
-  .footer ul li a {
+.footer ul li a {
     text-decoration: none;
     color: #fff;
     margin: 50px;
-  }
+}
+
+.fundo h1{
+    margin-top: 20px;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-right: 30px;
+    margin-top: 50px;
+    text-align: justify;
+    align-items: center;
+}
+
+.texto h1{
+    margin-bottom: 25px;
+}
+
+.img{
+    margin-top: 50px;
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+}
+
+.container2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.texto2{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-right: 30px;
+    margin-top: 50px;
+    text-align: justify;
+    align-items: center;
+}
+
+.texto2 h1{
+    margin-bottom: 25px;
+}
+
+.img2{
+    margin-top: 50px;
+}
+
+.img2 img{
+    border-radius: 10px;
+}
+
+.img img{
+    border-radius: 10px;
+}
